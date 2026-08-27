@@ -184,7 +184,7 @@ export default async function FieldnotesSection() {
                 <div className="relative aspect-[16/11] w-full overflow-hidden bg-white/[0.03]">
                   <img
                     src={heroNote.coverImage}
-                    alt={heroNote.alt}
+                    // alt={heroNote.alt}
                     className="
                       h-full
                       w-full
