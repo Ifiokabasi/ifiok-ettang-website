@@ -4,8 +4,8 @@ const links = [
   { label: "Films", href: "/films" },
   { label: "Documentaries", href: "/documentaries" },
   { label: "Journalism", href: "/journalism" },
-  { label: "Stories", href: "/stories" },
-  { label: "Contact", href: "#contact" },
+  { label: "Stories", href: "/fieldnotes" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {

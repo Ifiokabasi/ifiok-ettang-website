@@ -1,4 +1,3 @@
-
 type Status = "production" | "development" | "building" | "exploring";
 
 type Project = {
@@ -16,6 +15,7 @@ type Project = {
   ctaTextColor?: string;
   image: string;
   reverse?: boolean;
+  href?: string;
 };
 
 const projects: Project[] = [
@@ -35,6 +35,7 @@ const projects: Project[] = [
     ctaLabel: "VIEW PROJECT",
     ctaColor: "bg-red",
     image: "/images/now/skin-she-was-given.jpg",
+    href: "/projects/the-skin-she-was-given", // ← Dummy link added
   },
 
   {
@@ -54,6 +55,7 @@ const projects: Project[] = [
     ctaColor: "bg-red",
     image: "/images/now/untitled-narrative.jpg",
     reverse: true,
+    href: "/projects/untitled-narrative-short", // ← Dummy link added
   },
 
   {
@@ -73,6 +75,7 @@ const projects: Project[] = [
     ctaLabel: "DISCOVER CORNROW",
     ctaColor: "bg-amber",
     image: "/images/now/cornrow.jpg",
+    href: "https://cornrow.africa", // ← Actual link (keep as is)
   },
 
   {
@@ -93,6 +96,7 @@ const projects: Project[] = [
     ctaTextColor: "text-[#1a1a1a]",
     image: "/images/now/digital-storytelling.jpg",
     reverse: true,
+    href: "/projects/digital-storytelling-lab", // ← Dummy link added
   },
 ];
 
@@ -103,20 +107,9 @@ function Row({
   project: Project;
   index: number;
 }) {
-  return (
-    <div
-      className={`
-        flex
-        flex-col
-        items-center
-        gap-12
-        md:flex-row
-        md:justify-between
-        md:gap-20
-        lg:gap-28
-        ${project.reverse ? "md:flex-row-reverse" : ""}
-      `}
-    >
+  // The entire row content
+  const content = (
+    <>
       {/* IMAGE */}
       <div className="group relative w-full md:max-w-[50%]">
         <div className="relative aspect-[4/3] w-full overflow-hidden bg-white/5">
@@ -269,44 +262,128 @@ function Row({
           </div>
         )}
 
-        {/* CTA */}
-        <button
-          className={`
-            group/button
-            mt-9
-            inline-flex
-            items-center
-            gap-4
-            border
-            border-paper/15
-            px-6
-            py-3.5
-            font-poppins
-            text-[10px]
-            font-semibold
-            tracking-[0.2em]
-            transition-all
-            duration-300
-            hover:border-paper/40
-            hover:gap-6
-            ${project.ctaColor}
-            ${project.ctaTextColor ?? "text-paper"}
-          `}
-        >
-          <span>{project.ctaLabel}</span>
-
-          <span
-            className="
-              text-sm
-              transition-transform
+        {/* CTA - Now a Link */}
+        {project.href ? (
+          <a
+            href={project.href}
+            target={project.href.startsWith('http') ? "_blank" : undefined}
+            rel={project.href.startsWith('http') ? "noopener noreferrer" : undefined}
+            className={`
+              group/button
+              mt-9
+              inline-flex
+              items-center
+              gap-4
+              border
+              border-paper/15
+              px-6
+              py-3.5
+              font-poppins
+              text-[10px]
+              font-semibold
+              tracking-[0.2em]
+              transition-all
               duration-300
-              group-hover/button:translate-x-1
-            "
+              hover:border-paper/40
+              hover:gap-6
+              ${project.ctaColor}
+              ${project.ctaTextColor ?? "text-paper"}
+            `}
           >
-            →
-          </span>
-        </button>
+            <span>{project.ctaLabel}</span>
+
+            <span
+              className="
+                text-sm
+                transition-transform
+                duration-300
+                group-hover/button:translate-x-1
+              "
+            >
+              →
+            </span>
+          </a>
+        ) : (
+          <button
+            className={`
+              group/button
+              mt-9
+              inline-flex
+              items-center
+              gap-4
+              border
+              border-paper/15
+              px-6
+              py-3.5
+              font-poppins
+              text-[10px]
+              font-semibold
+              tracking-[0.2em]
+              transition-all
+              duration-300
+              hover:border-paper/40
+              hover:gap-6
+              ${project.ctaColor}
+              ${project.ctaTextColor ?? "text-paper"}
+            `}
+          >
+            <span>{project.ctaLabel}</span>
+
+            <span
+              className="
+                text-sm
+                transition-transform
+                duration-300
+                group-hover/button:translate-x-1
+              "
+            >
+              →
+            </span>
+          </button>
+        )}
       </div>
+    </>
+  );
+
+  // If href exists, wrap the entire row in a link
+  return project.href ? (
+    <a
+      href={project.href}
+      target={project.href.startsWith('http') ? "_blank" : undefined}
+      rel={project.href.startsWith('http') ? "noopener noreferrer" : undefined}
+      className={`
+        flex
+        flex-col
+        items-center
+        gap-12
+        md:flex-row
+        md:justify-between
+        md:gap-20
+        lg:gap-28
+        ${project.reverse ? "md:flex-row-reverse" : ""}
+        group/card
+        transition-opacity
+        duration-300
+        hover:opacity-90
+      `}
+    >
+      {content}
+    </a>
+  ) : (
+    <div
+      className={`
+        flex
+        flex-col
+        items-center
+        gap-12
+        md:flex-row
+        md:justify-between
+        md:gap-20
+        lg:gap-28
+        ${project.reverse ? "md:flex-row-reverse" : ""}
+      `}
+    >
+      {content}
     </div>
   );
 }
@@ -388,4 +465,3 @@ export default function NowSection() {
     </section>
   );
 }
-
