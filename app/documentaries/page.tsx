@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 
 /* =========================================================
@@ -82,7 +82,7 @@ const stages = [
    ANIMATION
    ========================================================= */
 
-const reveal = {
+const reveal: Variants = {
   hidden: {
     opacity: 0,
     y: 35,
@@ -97,7 +97,7 @@ const reveal = {
   },
 };
 
-const imageReveal = {
+const imageReveal: Variants = {
   hidden: {
     opacity: 0,
     scale: 1.08,

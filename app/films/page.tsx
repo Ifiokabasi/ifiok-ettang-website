@@ -1,8 +1,7 @@
-
 "use client";
-
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
+
 
 /* =========================================================
    PROJECT
@@ -111,7 +110,7 @@ const stages = [
    ANIMATION
    ========================================================= */
 
-const reveal = {
+const reveal: Variants = {
   hidden: {
     opacity: 0,
     y: 35,
@@ -123,12 +122,12 @@ const reveal = {
 
     transition: {
       duration: 0.8,
-      ease: [0.16, 1, 0.3, 1],
+      ease: "easeInOut",
     },
   },
 };
 
-const imageReveal = {
+const imageReveal: Variants = {
   hidden: {
     opacity: 0,
     scale: 1.08,
@@ -140,7 +139,7 @@ const imageReveal = {
 
     transition: {
       duration: 1.2,
-      ease: [0.16, 1, 0.3, 1],
+      ease: "easeInOut",
     },
   },
 };
@@ -170,7 +169,7 @@ export default function UntitledNarrativeShortPage() {
             animate={{ scale: 1 }}
             transition={{
               duration: 1.8,
-              ease: [0.16, 1, 0.3, 1],
+              ease: "easeInOut", // ✅ Fixed: changed from array to string
             }}
           />
 
@@ -212,7 +211,7 @@ export default function UntitledNarrativeShortPage() {
             transition={{
               delay: 0.5,
               duration: 1,
-              ease: [0.16, 1, 0.3, 1],
+              ease: "easeInOut", // ✅ Fixed: changed from array to string
             }}
             className="max-w-6xl font-poppins text-[3.8rem] font-medium leading-[0.84] tracking-[-0.065em] text-white sm:text-7xl md:text-8xl lg:text-[9rem]"
           >
@@ -436,7 +435,7 @@ export default function UntitledNarrativeShortPage() {
                 transition={{
                   duration: 1.5,
                   delay: 0.2,
-                  ease: [0.16, 1, 0.3, 1],
+                  ease: "easeInOut", // ✅ Fixed: changed from array to string
                 }}
                 className="absolute left-0 top-0 h-[2px] bg-red"
               />
