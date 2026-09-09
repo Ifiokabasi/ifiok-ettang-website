@@ -26,3 +26,5 @@ node_modules/
 app/.DS_Store
 sanity/.DS_Store
 node_modules/
+.next/
+.DS_Store
