@@ -1,1 +1,28 @@
-node_modules
+node_modules/
+.env
+.DS_Store
+dist/
+build/
+# Next.js build output
+.next/
+out/
+
+# OS files
+.DS_Store
+app/.DS_Store
+sanity/.DS_Store
+
+# Dependencies
+node_modules/
+
+# Environment variables
+.env*.local
+.env
+
+# Logs
+*.log
+.next/
+.DS_Store
+app/.DS_Store
+sanity/.DS_Store
+node_modules/
