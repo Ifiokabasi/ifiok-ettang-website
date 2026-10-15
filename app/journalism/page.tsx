@@ -18,6 +18,34 @@ type Story = {
 };
 
 const stories: Story[] = [
+
+
+     {
+  
+    title: "‘We drank each other’s urine’",
+    accent: "urine",
+    accentColor: "text-red",
+    category: "INVESTIGATION",
+    blurb: "Thirty-seven suspected illegal miners died in the custody of the Nigeria Security and Civil Defence Corps (NSCDC) in Minna, Niger State, in September 2026.",
+    image: "/images/stories/minna.jpg",
+    font: "font-medula",
+    titleClass: "text-4xl md:text-5xl",
+    youtubeId: "2l88n9Nxc24",
+},
+
+ {
+  
+    title: "‘We preferred to stay at home during our period’-Nigerian students",
+    accent: "Nigerian students",
+    accentColor: "text-green",
+    category: "HUMAN STORIES",
+    blurb: "A young researcher in Nigeria’s Plateau State is developing affordable, biodegradable sanitary pads to help girls stay in school and reduce environmental waste.",
+    image: "/images/stories/Period_Poverty.jpg",
+    font: "font-italiana",
+    titleClass: "text-4xl md:text-5xl",
+    youtubeId: "QQFyz9hl7nw",
+},
+
   {
     title: "Escaping Libya",
     category: "HUMAN STORIES",
@@ -112,6 +140,10 @@ const stories: Story[] = [
     titleClass: "text-4xl md:text-5xl",
     youtubeId: "2Sik0ZHRnIM",
   },
+
+
+
+
 ];
 
 const categories = [

@@ -1,7 +1,8 @@
+
 "use client";
+
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
-
 
 /* =========================================================
    PROJECT
@@ -9,26 +10,26 @@ import Link from "next/link";
 
 const project = {
   eyebrow: "DEVELOPING",
-  title: "UNTITLED NARRATIVE SHORT",
+  title: "THE GRINDING MACHINE",
   meta: "NARRATIVE FILM · 2027",
 
   description: [
-    "A character-driven story exploring",
-    "family, faith and ambition.",
+    "A gifted 13-year-old girl in Northern Nigeria",
+    "fights to pursue an education while feeding her family.",
   ],
 
   status: {
     label: "IN DEVELOPMENT",
     color: "bg-yellow",
-    target: "TARGET — Q1 2027",
+    target: "TARGET — Q2 2027",
   },
 
   ctaLabel: "VIEW PROJECT",
   ctaColor: "bg-red",
 
-  image: "/images/now/untitled-narrative.jpg",
+  image: "/images/now/the-grinding-machine.jpg",
 
-  href: "/projects/untitled-narrative-short",
+  href: "/projects/the-grinding-machine",
 };
 
 /* =========================================================
@@ -38,33 +39,33 @@ const project = {
 
 const projectPhotos = [
   {
-    src: "/images/projects/untitled-narrative/development-01.jpg",
-    alt: "Development work for Untitled Narrative Short",
+    src: "/images/projects/the-grinding-machine/development-01.jpg",
+    alt: "Visual research for The Grinding Machine",
     size: "large",
   },
   {
-    src: "/images/projects/untitled-narrative/development-02.jpg",
-    alt: "Story development and creative process",
+    src: "/images/projects/the-grinding-machine/development-02.jpg",
+    alt: "Research into everyday life in rural Northern Nigeria",
     size: "small",
   },
   {
-    src: "/images/projects/untitled-narrative/development-03.jpg",
-    alt: "Behind the scenes development",
+    src: "/images/projects/the-grinding-machine/development-03.jpg",
+    alt: "Visual references for Zainab's world",
     size: "small",
   },
   {
-    src: "/images/projects/untitled-narrative/development-04.jpg",
-    alt: "Narrative film development process",
+    src: "/images/projects/the-grinding-machine/development-04.jpg",
+    alt: "Developing the film's visual language",
     size: "wide",
   },
   {
-    src: "/images/projects/untitled-narrative/development-05.jpg",
-    alt: "Creative development for the film",
+    src: "/images/projects/the-grinding-machine/development-05.jpg",
+    alt: "Story development and screenplay research",
     size: "small",
   },
   {
-    src: "/images/projects/untitled-narrative/development-06.jpg",
-    alt: "Behind the scenes from development",
+    src: "/images/projects/the-grinding-machine/development-06.jpg",
+    alt: "Location and production research",
     size: "small",
   },
 ];
@@ -119,7 +120,6 @@ const reveal: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-
     transition: {
       duration: 0.8,
       ease: "easeInOut",
@@ -136,7 +136,6 @@ const imageReveal: Variants = {
   visible: {
     opacity: 1,
     scale: 1,
-
     transition: {
       duration: 1.2,
       ease: "easeInOut",
@@ -148,7 +147,7 @@ const imageReveal: Variants = {
    PAGE
    ========================================================= */
 
-export default function UntitledNarrativeShortPage() {
+export default function TheGrindingMachinePage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#111] text-paper">
 
@@ -169,7 +168,7 @@ export default function UntitledNarrativeShortPage() {
             animate={{ scale: 1 }}
             transition={{
               duration: 1.8,
-              ease: "easeInOut", // ✅ Fixed: changed from array to string
+              ease: "easeInOut",
             }}
           />
 
@@ -179,7 +178,6 @@ export default function UntitledNarrativeShortPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-black/10 to-black/30" />
 
         </div>
-
 
         {/* Hero content */}
         <div className="relative z-10 mx-auto flex min-h-[92vh] max-w-content flex-col justify-end px-6 pb-12 md:px-10 md:pb-16">
@@ -194,15 +192,12 @@ export default function UntitledNarrativeShortPage() {
             }}
             className="mb-7 flex items-center gap-3"
           >
-
             <span className="h-px w-8 bg-red" />
 
             <span className="text-[10px] font-semibold tracking-[0.3em] text-white/60">
               {project.eyebrow} · {project.meta}
             </span>
-
           </motion.div>
-
 
           {/* Title */}
           <motion.h1
@@ -211,20 +206,17 @@ export default function UntitledNarrativeShortPage() {
             transition={{
               delay: 0.5,
               duration: 1,
-              ease: "easeInOut", // ✅ Fixed: changed from array to string
+              ease: "easeInOut",
             }}
-            className="max-w-6xl font-poppins text-[3.8rem] font-medium leading-[0.84] tracking-[-0.065em] text-white sm:text-7xl md:text-8xl lg:text-[9rem]"
+            className="max-w-6xl font-poppins text-[3.5rem] font-medium leading-[0.84] tracking-[-0.065em] text-white sm:text-7xl md:text-8xl lg:text-[9rem]"
           >
-
-            UNTITLED
+            THE GRINDING
             <br />
 
             <span className="font-italiana text-[4.8rem] sm:text-8xl md:text-9xl lg:text-[10rem]">
-              NARRATIVE SHORT
+              MACHINE.
             </span>
-
           </motion.h1>
-
 
           {/* Bottom metadata */}
           <motion.div
@@ -238,48 +230,38 @@ export default function UntitledNarrativeShortPage() {
           >
 
             <div className="max-w-xl">
-
               <p className="text-sm leading-[1.7] text-white/65 md:text-base">
                 {project.description[0]}{" "}
                 {project.description[1]}
               </p>
-
             </div>
-
 
             <div className="flex items-center gap-8">
 
               {/* Status */}
               <div>
-
                 <p className="mb-1 text-[8px] tracking-[0.25em] text-white/35">
                   STATUS
                 </p>
 
                 <div className="flex items-center gap-2">
-
                   <span className="h-1.5 w-1.5 rounded-full bg-yellow" />
 
                   <span className="text-[9px] font-semibold tracking-[0.2em] text-white/70">
                     {project.status.label}
                   </span>
-
                 </div>
-
               </div>
-
 
               {/* Target */}
               <div>
-
                 <p className="mb-1 text-[8px] tracking-[0.25em] text-white/35">
                   TARGET
                 </p>
 
                 <p className="text-[9px] font-semibold tracking-[0.2em] text-white/70">
-                  Q1 2027
+                  Q2 2027
                 </p>
-
               </div>
 
             </div>
@@ -289,7 +271,6 @@ export default function UntitledNarrativeShortPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           PROJECT INTRO
@@ -309,19 +290,14 @@ export default function UntitledNarrativeShortPage() {
               amount: 0.3,
             }}
           >
-
             <div className="flex items-center gap-3">
-
               <span className="h-px w-7 bg-red" />
 
               <span className="text-[10px] font-semibold tracking-[0.3em] text-paper/35">
                 THE FILM
               </span>
-
             </div>
-
           </motion.div>
-
 
           {/* Copy */}
           <motion.div
@@ -333,37 +309,39 @@ export default function UntitledNarrativeShortPage() {
               amount: 0.3,
             }}
           >
-
             <h2 className="max-w-4xl font-poppins text-3xl font-medium leading-[1] tracking-[-0.04em] text-paper md:text-5xl">
-
-              A story about
+              A childhood caught
               <br />
 
               <span className="font-italiana text-5xl md:text-7xl">
-                family, faith and ambition.
+                between duty and dreams.
               </span>
-
             </h2>
-
 
             <div className="mt-9 max-w-2xl space-y-5 text-sm leading-[1.8] text-paper/45 md:text-base">
 
               <p>
-                Untitled Narrative Short is a character-driven narrative
-                film exploring the complicated intersection of family,
-                faith and ambition.
+                In a rural Northern Nigerian village, Zainab, a
+                gifted 13-year-old girl, begins each morning before
+                dawn grinding grain for her family. By the time
+                the school bell rings, she is already racing against
+                a clock that was never designed for a child like her.
               </p>
 
               <p>
-                The story follows characters caught between what they
-                believe, what they owe to the people they love, and the
-                lives they dream of building for themselves.
+                Torn between the demands of survival and her
+                determination to learn, Zainab must find a way to
+                hold on to her education without abandoning the
+                family that depends on her.
               </p>
 
               <p>
-                Currently in development, the film is being shaped through
-                story development, writing, research and visual exploration
-                ahead of pre-production.
+                The Grinding Machine is a character-driven narrative
+                short about childhood, invisible labour and the
+                quiet courage it takes to imagine a different future.
+                Rooted in the textures and rhythms of rural Northern
+                Nigeria, the film explores the cost of a dream when
+                survival comes first.
               </p>
 
             </div>
@@ -373,7 +351,6 @@ export default function UntitledNarrativeShortPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           PROJECT PROGRESS
@@ -387,27 +364,21 @@ export default function UntitledNarrativeShortPage() {
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
 
             <div>
-
               <div className="mb-5 flex items-center gap-3">
-
                 <span className="h-px w-7 bg-red" />
 
                 <span className="text-[10px] font-semibold tracking-[0.3em] text-paper/35">
                   DEVELOPMENT
                 </span>
-
               </div>
 
               <h2 className="font-poppins text-4xl font-medium tracking-[-0.045em] md:text-6xl">
-                The journey so far.
+                From an idea to a film.
               </h2>
-
             </div>
-
 
             {/* Percentage */}
             <div className="flex items-end gap-3">
-
               <span className="font-poppins text-5xl font-medium leading-none tracking-[-0.05em] md:text-7xl">
                 18
               </span>
@@ -415,17 +386,14 @@ export default function UntitledNarrativeShortPage() {
               <span className="mb-1 text-2xl text-paper/30">
                 %
               </span>
-
             </div>
 
           </div>
-
 
           {/* Progress bar */}
           <div className="mt-12">
 
             <div className="relative h-[2px] w-full bg-paper/10">
-
               <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: "18%" }}
@@ -435,23 +403,18 @@ export default function UntitledNarrativeShortPage() {
                 transition={{
                   duration: 1.5,
                   delay: 0.2,
-                  ease: "easeInOut", // ✅ Fixed: changed from array to string
+                  ease: "easeInOut",
                 }}
                 className="absolute left-0 top-0 h-[2px] bg-red"
               />
-
             </div>
-
 
             {/* Stage labels */}
             <div className="mt-7 grid grid-cols-2 gap-y-8 sm:grid-cols-3 lg:grid-cols-6">
 
               {stages.map((stage, index) => {
-
                 const current = stage.status === "CURRENT";
-
-                const completed =
-                  stage.status === "COMPLETED";
+                const completed = stage.status === "COMPLETED";
 
                 return (
                   <motion.div
@@ -473,7 +436,6 @@ export default function UntitledNarrativeShortPage() {
                     }}
                     className="relative"
                   >
-
                     <div className="mb-3 flex items-center gap-2">
 
                       <span
@@ -497,7 +459,6 @@ export default function UntitledNarrativeShortPage() {
 
                     </div>
 
-
                     <p
                       className={`
                         text-[9px] font-semibold tracking-[0.18em]
@@ -512,7 +473,6 @@ export default function UntitledNarrativeShortPage() {
                     >
                       {stage.name}
                     </p>
-
 
                     <p className="mt-1 text-[8px] tracking-[0.15em] text-paper/20">
                       {stage.number}
@@ -529,7 +489,6 @@ export default function UntitledNarrativeShortPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           CURRENT STAGE
@@ -549,31 +508,23 @@ export default function UntitledNarrativeShortPage() {
               amount: 0.25,
             }}
           >
-
             <div className="mb-6 flex items-center gap-3">
-
               <span className="h-px w-7 bg-yellow" />
 
               <span className="text-[10px] font-semibold tracking-[0.3em] text-yellow">
                 CURRENT STAGE
               </span>
-
             </div>
 
-
             <h2 className="font-poppins text-5xl font-medium leading-[0.9] tracking-[-0.05em] md:text-7xl">
-
-              In
+              Finding
               <br />
 
               <span className="font-italiana text-6xl md:text-8xl">
-                development.
+                Zainab's world.
               </span>
-
             </h2>
-
           </motion.div>
-
 
           {/* Copy */}
           <motion.div
@@ -586,41 +537,38 @@ export default function UntitledNarrativeShortPage() {
             }}
             className="max-w-xl"
           >
-
             <p className="text-base leading-[1.8] text-paper/55 md:text-lg">
-              The film is currently taking shape. The story, characters
-              and world are being developed before the project moves into
-              the physical process of filmmaking.
+              The film is currently in development, with a focus on
+              building a truthful, emotionally grounded story around
+              Zainab's daily life, her family responsibilities and
+              her determination to go to school.
             </p>
-
 
             <p className="mt-6 text-sm leading-[1.8] text-paper/35 md:text-base">
-              This stage is about discovering the strongest version of
-              the story — developing the screenplay, refining the
-              characters and establishing the visual language that will
-              eventually define the film.
+              The process involves refining the screenplay,
+              researching the realities of rural life, developing
+              the characters and identifying locations, performers
+              and visual references. The goal is to tell a deeply
+              local story with a universal emotional resonance,
+              without losing the authenticity of the world it
+              represents.
             </p>
-
 
             {/* Target */}
             <div className="mt-10 border-l border-paper/15 pl-5">
-
               <p className="text-[9px] font-semibold tracking-[0.25em] text-paper/30">
                 TARGET
               </p>
 
               <p className="mt-2 font-poppins text-sm font-medium tracking-[0.05em] text-paper">
-                Q1 2027
+                Q2 2027
               </p>
-
             </div>
-
           </motion.div>
 
         </div>
 
       </section>
-
 
       {/* =====================================================
           DEVELOPMENT GALLERY
@@ -634,45 +582,35 @@ export default function UntitledNarrativeShortPage() {
           <div className="mb-16 flex flex-col justify-between gap-8 md:mb-20 md:flex-row md:items-end">
 
             <div>
-
               <div className="mb-5 flex items-center gap-3">
-
                 <span className="h-px w-7 bg-red" />
 
                 <span className="text-[10px] font-semibold tracking-[0.3em] text-paper/35">
                   BEHIND THE FILM
                 </span>
-
               </div>
 
-
               <h2 className="font-poppins text-4xl font-medium leading-[0.95] tracking-[-0.045em] md:text-6xl">
-
-                Developing
+                The world
                 <br />
 
                 <span className="font-italiana text-5xl md:text-8xl">
-                  the story.
+                  before the story.
                 </span>
-
               </h2>
-
             </div>
 
-
             <p className="max-w-xs text-sm leading-[1.7] text-paper/35">
-              A glimpse into the creative process behind Untitled
-              Narrative Short.
+              Exploring the people, places, textures and everyday
+              rhythms that will shape The Grinding Machine.
             </p>
 
           </div>
-
 
           {/* Gallery */}
           <div className="grid grid-cols-1 gap-5 md:grid-cols-12 md:gap-6">
 
             {projectPhotos.map((photo, index) => {
-
               let gridClass = "";
 
               if (photo.size === "large") {
@@ -695,7 +633,6 @@ export default function UntitledNarrativeShortPage() {
                   }}
                   className={`group relative overflow-hidden ${gridClass}`}
                 >
-
                   <div
                     className={`
                       relative overflow-hidden bg-white/5
@@ -708,24 +645,20 @@ export default function UntitledNarrativeShortPage() {
                       }
                     `}
                   >
-
                     <img
                       src={photo.src}
                       alt={photo.alt}
+                      loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
                     />
 
-
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-70 transition-opacity duration-700 group-hover:opacity-30" />
-
                   </div>
-
 
                   {/* Image number */}
                   <figcaption className="absolute bottom-4 left-4 text-[9px] font-medium tracking-[0.25em] text-white/60">
                     {String(index + 1).padStart(2, "0")}
                   </figcaption>
-
                 </motion.figure>
               );
             })}
@@ -735,7 +668,6 @@ export default function UntitledNarrativeShortPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           DEVELOPMENT JOURNAL
@@ -756,19 +688,14 @@ export default function UntitledNarrativeShortPage() {
                 once: true,
               }}
             >
-
               <div className="flex items-center gap-3">
-
                 <span className="h-px w-7 bg-red" />
 
                 <span className="text-[10px] font-semibold tracking-[0.3em] text-paper/35">
                   DEVELOPMENT JOURNAL
                 </span>
-
               </div>
-
             </motion.div>
-
 
             {/* Copy */}
             <motion.div
@@ -780,37 +707,31 @@ export default function UntitledNarrativeShortPage() {
               }}
               className="max-w-2xl"
             >
-
               <h2 className="font-poppins text-3xl font-medium leading-[1] tracking-[-0.04em] md:text-5xl">
-
-                Building the story
+                Every story begins
                 <br />
 
                 <span className="font-italiana text-5xl md:text-7xl">
-                  before the cameras roll.
+                  with paying attention.
                 </span>
-
               </h2>
 
-
               <p className="mt-8 text-sm leading-[1.8] text-paper/45 md:text-base">
-                The development journal will follow the evolution of
-                the project — from the first idea and screenplay through
-                character development, visual references, casting,
-                locations and pre-production.
+                Follow the making of The Grinding Machine, from
+                screenplay development and cultural research to
+                location scouting, casting, cinematography and
+                production. The journal will document the creative
+                decisions behind the film and the process of
+                bringing Zainab's story to the screen.
               </p>
 
-
               <div className="mt-10 flex items-center gap-4">
-
                 <span className="h-px w-8 bg-paper/15" />
 
                 <span className="text-[9px] tracking-[0.25em] text-paper/25">
                   UPDATES COMING SOON
                 </span>
-
               </div>
-
             </motion.div>
 
           </div>
@@ -818,7 +739,6 @@ export default function UntitledNarrativeShortPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           PROJECT CTA
@@ -838,10 +758,8 @@ export default function UntitledNarrativeShortPage() {
             }}
             className="text-center"
           >
-
             {/* Eyebrow */}
             <div className="mb-7 flex items-center justify-center gap-3">
-
               <span className="h-px w-7 bg-red" />
 
               <span className="text-[10px] font-semibold tracking-[0.3em] text-paper/35">
@@ -849,47 +767,35 @@ export default function UntitledNarrativeShortPage() {
               </span>
 
               <span className="h-px w-7 bg-red" />
-
             </div>
-
 
             {/* Heading */}
             <h2 className="font-poppins text-4xl font-medium leading-[0.9] tracking-[-0.05em] md:text-7xl">
-
-              A story
+              A dream
               <br />
 
               <span className="font-italiana text-6xl md:text-9xl">
-                taking shape.
+                worth fighting for.
               </span>
-
             </h2>
 
-
             <p className="mx-auto mt-8 max-w-md text-sm leading-[1.7] text-paper/35">
-              Follow the development of Untitled Narrative Short as the
-              story moves from the page toward production.
+              A Northern Nigerian story about a girl, a grinding
+              stone and the future she refuses to give up on.
             </p>
-
 
             {/* CTA */}
             <div className="mt-10">
-
               <Link
-                    href="/"
+                href="/"
                 className="group inline-flex items-center gap-4 border border-paper/15 bg-red px-7 py-4 font-poppins text-[10px] font-semibold tracking-[0.2em] text-paper transition-all duration-300 hover:gap-6 hover:border-paper/40"
               >
-
-                <span>
-                 BACK TO HOME
-                </span>
+                <span>BACK TO HOME</span>
 
                 <span className="text-sm transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-
               </Link>
-
             </div>
 
           </motion.div>

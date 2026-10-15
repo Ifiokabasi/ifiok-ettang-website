@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Background film */}
       <div className="absolute inset-0">
         <video
-          src="/videos/hero_vulture.mp4"
+          src="/videos/hero_vol2.mp4"
           autoPlay
           muted
           loop
@@ -31,17 +31,18 @@ export default function Hero() {
           FEATURED FILM
         </p>
 
-        <h1 className="font-inter text-[15vw] font-black leading-[0.9] text-yellow sm:text-[9vw] md:text-[110px] lg:text-[128px]">
-          KING
+        <h1 className="font-inter text-[15vw] font-black leading-[0.9] text-red sm:text-[9vw] md:text-[110px] lg:text-[128px]">
+          NIGERIA'S
           <span className="mx-3 align-middle font-poppins text-[6vw] font-normal text-white sm:text-3xl md:text-4xl">
-            OF
+            PERIOD
           </span>
           <br />
-          VULTURES
+          PORVERTY
         </h1>
 
         <p className="mt-8 max-w-xl font-poppins text-xl tracking-wide text-paper sm:text-2xl md:text-3xl">
-          The man racing to save Nigeria&rsquo;s disappearing birds
+         
+A Nigerian researcher creates affordable, biodegradable pads to keep girls in school and protect the environment.
         </p>
 
         {/* Watch Film */}
@@ -78,9 +79,10 @@ export default function Hero() {
             {/* Embedded YouTube player */}
             <iframe
               className="h-full w-full"
-              src="https://www.youtube.com/embed/lsfywanO-4Y?autoplay=1&rel=0"
-              title="King of Vultures"
+              src="https://www.youtube.com/embed/QQFyz9hl7nw"
+              title="We Used to Stay Home During Our Periods"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             />
           </div>

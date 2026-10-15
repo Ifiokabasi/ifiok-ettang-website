@@ -16,6 +16,33 @@ type Story = {
 };
 
 const stories: Story[] = [
+
+     {
+  
+    title: "‘We drank each other’s urine’",
+    accent: "urine",
+    accentColor: "text-red",
+    category: "INVESTIGATION",
+    blurb: "Thirty-seven suspected illegal miners died in the custody of the Nigeria Security and Civil Defence Corps (NSCDC) in Minna, Niger State, in September 2026.",
+    image: "/images/stories/minna.jpg",
+    font: "font-medula",
+    titleClass: "text-4xl md:text-5xl",
+    youtubeId: "2l88n9Nxc24",
+},
+
+ {
+  
+    title: "‘We preferred to stay at home during our period’-Nigerian students",
+    accent: "Nigerian students",
+    accentColor: "text-green",
+    category: "HUMAN STORIES",
+    blurb: "A young researcher in Nigeria’s Plateau State is developing affordable, biodegradable sanitary pads to help girls stay in school and reduce environmental waste.",
+    image: "/images/stories/Period_Poverty.jpg",
+    font: "font-italiana",
+    titleClass: "text-4xl md:text-5xl",
+    youtubeId: "QQFyz9hl7nw",
+},
+
   {
     title: "Escaping Libya",
     category: "HUMAN STORIES",
@@ -78,16 +105,7 @@ const stories: Story[] = [
     titleClass: "text-6xl md:text-7xl",
     youtubeId: "vT0CaMgSlMQ",
   },
-  {
-    title: "The Watch Maker",
-    category: "CULTURE",
-    blurb:
-      "Once a bustling trade where he repaired over 100 watches a day, the craft has slowed significantly as mobile phones replace wristwatches.",
-    image: "/images/stories/watch-maker.jpg",
-    font: "font-italiana",
-    titleClass: "text-5xl md:text-6xl",
-    youtubeId: "qpn5_S_U2zo",
-  },
+  
   {
     title: "Five Crowns, One Mother",
     category: "SPORT & LIFE",
@@ -98,18 +116,7 @@ const stories: Story[] = [
     titleClass: "text-5xl md:text-6xl",
     youtubeId: "3NgZhXpAbr4/edit",
   },
-  {
-    title: "‘It’s too bitter for me and my family’",
-    accent: "bitter",
-    accentColor: "text-red",
-    category: "HUMAN STORIES",
-    blurb:
-      "Chike Michael Onovo lost his 15-year-old son, Chidera, in Jos, Nigeria.",
-    image: "/images/stories/too-bitter.jpg",
-    font: "font-medula",
-    titleClass: "text-4xl md:text-5xl",
-    youtubeId: "2Sik0ZHRnIM",
-  },
+  
 ];
 
 function StoryCard({
