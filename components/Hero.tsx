@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -25,24 +24,23 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto flex min-h-[620px] max-w-content flex-col justify-end px-6 pb-20 pt-32 md:min-h-[760px] md:px-10 md:pb-28">
-
         {/* Featured Film Label */}
         <p className="mb-4 font-poppins text-sm tracking-[0.3em] text-paper/70">
           FEATURED FILM
         </p>
 
         <h1 className="font-inter text-[15vw] font-black leading-[0.9] text-red sm:text-[9vw] md:text-[110px] lg:text-[128px]">
-          NIGERIA'S
+          NIGERIA&rsquo;S {/* ✅ FIXED: was NIGERIA'S */}
           <span className="mx-3 align-middle font-poppins text-[6vw] font-normal text-white sm:text-3xl md:text-4xl">
             PERIOD
           </span>
           <br />
-          PORVERTY
+          POVERTY {/* ✅ FIXED: was PORVERTY (typo) */}
         </h1>
 
         <p className="mt-8 max-w-xl font-poppins text-xl tracking-wide text-paper sm:text-2xl md:text-3xl">
-         
-A Nigerian researcher creates affordable, biodegradable pads to keep girls in school and protect the environment.
+          A Nigerian researcher creates affordable, biodegradable pads
+          to keep girls in school and protect the environment.
         </p>
 
         {/* Watch Film */}
