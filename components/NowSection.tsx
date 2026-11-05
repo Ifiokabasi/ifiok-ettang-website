@@ -35,7 +35,7 @@ const projects: Project[] = [
     ctaLabel: "VIEW PROJECT",
     ctaColor: "bg-red",
     image: "/images/now/skin-she-was-given.jpg",
-    href: "/documentaries", // ← Dummy link added
+    href: "/documentaries", // 
   },
 
  
