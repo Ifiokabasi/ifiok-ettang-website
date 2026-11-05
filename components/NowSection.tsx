@@ -35,28 +35,33 @@ const projects: Project[] = [
     ctaLabel: "VIEW PROJECT",
     ctaColor: "bg-red",
     image: "/images/now/skin-she-was-given.jpg",
-    href: "/projects/the-skin-she-was-given", // ← Dummy link added
+    href: "/documentaries", // ← Dummy link added
   },
 
+ 
   {
-    eyebrow: "DEVELOPING",
-    title: "UNTITLED NARRATIVE SHORT",
-    meta: "NARRATIVE FILM · 2027",
-    description: [
-      "A character-driven story exploring",
-      "family, faith and ambition.",
-    ],
-    status: {
-      label: "IN DEVELOPMENT",
-      color: "bg-yellow",
-      target: "TARGET — Q1 2027",
-    },
-    ctaLabel: "VIEW PROJECT",
-    ctaColor: "bg-red",
-    image: "/images/now/untitled-narrative.jpg",
-    reverse: true,
-    href: "/projects/untitled-narrative-short", // ← Dummy link added
+  eyebrow: "DEVELOPING",
+  title: "THE GRINDING MACHINE",
+  meta: "NARRATIVE FILM · 2027",
+
+  description: [
+    "A gifted 13-year-old girl in Northern Nigeria",
+    "fights to pursue an education while feeding her family.",
+  ],
+
+  status: {
+    label: "IN DEVELOPMENT",
+    color: "bg-yellow",
+    target: "TARGET — Q2 2027",
   },
+
+  ctaLabel: "VIEW PROJECT",
+  ctaColor: "bg-red",
+
+  image: "/images/now/the-grinding-machine.jpg",
+
+  href: "/films",
+},
 
   {
     eyebrow: "BUILDING",
